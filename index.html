@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text To Speech</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #A5BCF3;
+        }
+        
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 50%;
+            height: 400px;
+            margin: auto;
+            transform: translateY(50%);
+            /* background-color: rgba(0, 128, 128, 0.466); */
+            background-color: #6f99fa;
+            box-shadow: 0 0 10px 4px #aec6ff;
+            border-radius: 15px;
+        }
+
+        .container h1,
+        #myText,
+        #speak {
+            margin: 20px auto;
+        }
+
+        .container h1 {
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .container #myText {
+            border: none;
+            border-radius: 15px;
+            padding: 5px 10px;
+            resize: none;
+            width: 70%;
+            height: 50%;
+        }
+
+        .container #myText::placeholder{
+            text-align: center;
+        }
+
+        .container #myText:focus {
+            outline: none;
+        }
+
+        .container #speak {
+            border: none;
+            border-radius: 15px;
+            padding: 5px 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            background: none;
+            background: greenyellow;
+            transition: .2s all;
+        }
+
+        .container #speak:hover {
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.514);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading">Text To Speech Converter</h1>
+        <textarea placeholder="Paste Your Text Here" id="myText" cols="30" rows="10"></textarea>
+        <button id="speak" >Speak</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
